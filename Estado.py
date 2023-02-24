@@ -1,5 +1,5 @@
 from Ponto import Ponto
-from Heap import Heap
+
 
 # Classe responsavel por:
 # - Fazer os possiveis proximos estados de um Estados Atual 

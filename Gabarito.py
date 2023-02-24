@@ -1,6 +1,6 @@
 from Estado import Estado
 from Heap import Heap
-from Ponto import Ponto
+
 
 # Classe responsavel por:
 # - retornar vetor com o caminho desde o Ponto incial até o Ponto Final

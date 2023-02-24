@@ -1,5 +1,4 @@
-from Gera_labirinto_automatico import Gera_labirinto_automatico
-from Gera_labirinto_manual import Gera_labirinto_manual
+
 from Estado import Estado
 from Gabarito import Gabarito
 import pygame
@@ -169,9 +168,3 @@ class interface:
             self.automatico(resposta)
             return False, len(resposta)
 
-#mat =LabirintoManual(27,17)
-#mat.manual()
-
-#print("X: {} - Y: {}".format(mat.po))
-#lab = interface(mat)
-#lab.to_execute_Automatico()

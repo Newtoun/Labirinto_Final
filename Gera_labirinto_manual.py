@@ -1,5 +1,4 @@
-from Estado import Estado
-from Gabarito import Gabarito
+
 from Ponto import Ponto
 import pygame
 
