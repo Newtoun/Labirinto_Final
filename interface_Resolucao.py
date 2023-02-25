@@ -113,7 +113,7 @@ class interface:
         matrizcopia  = self.matriz
         loop = True
         Retorno = False
-        instrucao = '- TECLE NAS (SETAS) PARA CHEGAR NO ICOMP - (X) PARA SAIR OU RESOLVER AUTOMATICAMENTE'
+        instrucao = '-(SETAS) PARA SE MOVIMENTAR -(X) PARA SAIR OU RESOLVER AUT.'
         movimentos = 0
 
         while loop:

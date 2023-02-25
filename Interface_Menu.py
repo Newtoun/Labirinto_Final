@@ -411,8 +411,6 @@ def tela_Desistiu(labirinto):
 			pygame.quit()
 			pygame.time.delay(100)
 			jogo = interface(labirinto)
-			print("{}-{}".format(jogo.ponto_Inicial.x, jogo.ponto_Inicial.y))
-			labirinto.imprime_Matriz()
 			resposta, movimentos = jogo.to_execute_Automatico()
 			if resposta: 
 				pygame.quit()
