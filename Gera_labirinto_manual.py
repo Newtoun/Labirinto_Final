@@ -2,7 +2,7 @@
 from Ponto import Ponto
 import pygame
 
-speed = 25
+speed = 25 #velocidade do jogador
 x = y = 25
 
 # Classe responsável por:

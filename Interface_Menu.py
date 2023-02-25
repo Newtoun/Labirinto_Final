@@ -2,7 +2,7 @@ import pygame
 import Botao
 from Gera_labirinto_automatico import Gera_labirinto_automatico
 from Gera_labirinto_manual import Gera_labirinto_manual
-from interface import interface
+from interface_Resolucao import interface
 
 
 SCREEN_HEIGHT = 500 # Altura da Tela de Comandos

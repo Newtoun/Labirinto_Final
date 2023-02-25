@@ -1,3 +1,6 @@
+
+# Classe responsável por:
+# - Atualizações na fila de Prioridade que define qual será o proximo estao selecionado
 class Heap:
     
     # min_heapify = Transforma uma quase heap Minima em uma heap Minima
