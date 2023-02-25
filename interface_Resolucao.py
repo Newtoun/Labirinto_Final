@@ -60,7 +60,7 @@ class interface:
         self.screen.blit(player, [self.x, self.y])  
 
     # automatico = funcao responsavel pela resolucao do labirinto de forma automatica 
-    def automatico(self,resposta): 
+    def automatico(self,resposta):
 
         loop = True
         i = 0
@@ -110,6 +110,7 @@ class interface:
 
     # manual = funcao responsavel pela resolucao do labirinto de forma manual 
     def manual(self):
+        matrizcopia  = self.matriz
         loop = True
         Retorno = False
         instrucao = '- TECLE NAS (SETAS) PARA CHEGAR NO ICOMP - (X) PARA SAIR OU RESOLVER AUTOMATICAMENTE'
@@ -121,7 +122,10 @@ class interface:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     loop = False
+                    self.matriz = matrizcopia
                     movimentos = 0
+                    self.x = self.ponto_Inicial.x
+                    self.y = self.ponto_Inicial.y
 
             
             keys = pygame.key.get_pressed() #leitura do teclado do usuario
@@ -146,6 +150,12 @@ class interface:
             if keys[pygame.K_DOWN]: # Seta Baixo = movimenta para baixo
                 self.y += speed
                 movimentos += 1
+            if keys[pygame.K_x]:
+                loop = False
+                self.x = self.ponto_Inicial.x
+                self.y = self.ponto_Inicial.y
+                self.matriz = matrizcopia
+                movimentos = 0
             
             row = self.y // 25
             column = self.x // 25
@@ -155,7 +165,7 @@ class interface:
 
             self.screen.fill((255,255,255))
             interface.game_map(self, instrucao)
-            interface.player(self, )
+            interface.player(self)
             pygame.display.update()
 
             if row == self.ponto_Final.y and column == self.ponto_Final.x:
@@ -173,7 +183,7 @@ class interface:
     def to_execute_Automatico(self):
         estadoInicial = Estado(self.matriz,self.ponto_Inicial,self.ponto_Final,0, [])
         resposta = Gabarito.caminho_ate_Fim(estadoInicial)
-        print(resposta)
+        #print(resposta)
         if (resposta == []):
            pygame.quit()
            return True, len(resposta)

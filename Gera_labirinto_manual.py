@@ -152,8 +152,8 @@ class Gera_labirinto_manual:
                 if event.type == pygame.QUIT:
                     loop = False
 
-            #player controls
-            keys = pygame.key.get_pressed()
+            
+            keys = pygame.key.get_pressed()# leitura do teclado
             
             pos = x, y
 
