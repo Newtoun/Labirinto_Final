@@ -31,7 +31,7 @@ class Estado:
         for i in range(1,5):
             proxEstado, direcao = Ponto.RetornaPonto(self.PontoAtual, i) # retorna proximo ponto e qual direção foi realizada para chegar nesse ponto
 
-            if (self.matriz[proxEstado.y][proxEstado.x] != 0) and ((proxEstado.x, proxEstado.y) not in estados_Passados):
+            if (self.matriz[proxEstado.y][proxEstado.x] == 1) and ((proxEstado.x, proxEstado.y) not in estados_Passados):
                 caminho = self.caminho + [direcao] # adicionando movimento no caminho 
                 saida.append(Estado(self.matriz, proxEstado, self.PontoFinal, self.g + 1, caminho))
         return saida

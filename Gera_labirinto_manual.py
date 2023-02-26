@@ -120,7 +120,7 @@ class Gera_labirinto_manual:
                 self.matriz[y//25][x//25] = 1
             
             
-            if y<0 or y>(self.altura-1)*25: # verificação de não infringe limites do labirinto
+            if y<=0 or y==(self.altura-1)*25: # verificação de não infringe limites do labirinto
                 x,y = pos
             
             if escolhas==2: # já realizou as duas escolhas

@@ -110,7 +110,6 @@ class interface:
 
     # manual = funcao responsavel pela resolucao do labirinto de forma manual 
     def manual(self):
-        matrizcopia  = self.matriz
         loop = True
         Retorno = False
         instrucao = '-(SETAS) PARA SE MOVIMENTAR -(X) PARA SAIR OU RESOLVER AUT.'
@@ -122,8 +121,8 @@ class interface:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     loop = False
-                    self.matriz = matrizcopia
                     movimentos = 0
+                    self.matrizInicial()               
                     self.x = self.ponto_Inicial.x
                     self.y = self.ponto_Inicial.y
 
@@ -154,8 +153,8 @@ class interface:
                 loop = False
                 self.x = self.ponto_Inicial.x
                 self.y = self.ponto_Inicial.y
-                self.matriz = matrizcopia
                 movimentos = 0
+                self.matrizInicial() 
             
             row = self.y // 25
             column = self.x // 25
@@ -190,4 +189,9 @@ class interface:
         else:
             self.automatico(resposta)
             return False, len(resposta)
-
+     
+    def matrizInicial(self):
+        for i in range(self.altura):
+            for j in range(self.largura):
+                if self.matriz[i][j] == 2:
+                    self.matriz[i][j] = 1
