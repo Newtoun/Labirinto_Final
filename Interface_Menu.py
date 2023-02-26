@@ -199,7 +199,7 @@ def tela_Resolver(labirinto):
 
 		screen.fill((202, 228, 241))
 		# -----------Plota as imagens----------------#
-		screen.blit(fundo_Imagem, (0, 0))
+		screen.blit(fundo_Imagem2, (0, 0))
 		screen.blit(criar_labirinto, (0, 25))
 		screen.blit(predio, (600, 303))
 		# -------------------------------------------#
