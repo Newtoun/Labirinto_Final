@@ -189,7 +189,8 @@ class interface:
         else:
             self.automatico(resposta)
             return False, len(resposta)
-     
+    
+    # matrizInicial = funcao responsavel para retornar a matriz original
     def matrizInicial(self):
         for i in range(self.altura):
             for j in range(self.largura):
